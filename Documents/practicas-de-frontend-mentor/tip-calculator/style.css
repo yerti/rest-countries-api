@@ -1,0 +1,209 @@
+:root {
+    --strong-cyan: hsl(172, 67%, 45%);
+    --very-dark-cyan: hsl(183, 100%, 15%);
+    --dark-grayish-cyan: hsl(186, 14%, 43%);
+    --grayish-cyan: hsl(184, 14%, 56%);
+    --light-grayish-cyan: hsl(185, 41%, 84%);
+    --very-light-grayish-cyan: hsl(189, 41%, 97%);
+    --White: hsl(0, 0%, 100%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-family: 'Space Mono', monospace;
+}
+body {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--light-grayish-cyan);
+}
+footer {
+    margin: 50px 0;
+}
+
+main {
+    border-radius: 25px 25px 0 0;
+    padding: 32px;
+    background-color: var(--White);
+}
+.informacion-cliente label {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--dark-grayish-cyan);
+}
+.cliente-input {
+    width: 100%;
+    height: 48px;
+    margin-top: 6px;
+    font-size: 24px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--very-light-grayish-cyan);
+    background-image: url(images/icon-dollar.svg);
+    background-repeat: no-repeat;
+    background-position: left;
+    text-align: right;
+    padding: 0 12px;
+    cursor: pointer;
+    outline: none;
+}
+.cliente-input:focus {
+    border: 2px solid #26C2AE;
+}
+.cliente-input[type=number]::-webkit-inner-spin-button, 
+.cliente-input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+.contenido-cupones {
+    display: flex;
+    flex-direction: column;
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+.contenido-cupones p {
+    margin-bottom: 16px;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--dark-grayish-cyan);
+}
+.cupones-descuento {
+    width: 330px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.cupones {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: 1fr 1fr;
+    
+}
+.cupones-descuento button {
+    width: 150px;
+    height: 48px;
+    font-size: 24px;
+    font-weight: 700;
+    border: none;
+    border-radius: 5px;
+    color: var(--White);
+    background-color: var(--very-dark-cyan);
+}
+.cupones-descuento button:focus {
+    background-color: var(--strong-cyan);
+}
+.porcentaje-cliente {
+    height: 48px;
+    text-align: center;
+    width: 150px;
+    font-size: 24px;
+    font-weight: 700;
+    border: none;
+    border-radius: 5px;
+    color: var(--very-dark-cyan);
+    background-color: var(--very-light-grayish-cyan);
+    outline: none;
+}
+.porcentaje-cliente::placeholder {
+    font-size: 24px;
+    font-weight: 700;
+    padding-right: 10PX;
+    color: var(--dark-grayish-cyan);
+}
+.porcentaje-cliente:focus {
+    border: 2px solid #26C2AE;
+}
+.porcentaje-cliente[type=number]::-webkit-inner-spin-button, 
+.porcentaje-cliente[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+.numero-personas {
+    height: 48px;
+    margin-bottom: 32px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    border: none;
+    border-radius: 5px;
+    color: var(--very-dark-cyan);
+    background-image: url(images/icon-person.svg);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-color: var(--very-light-grayish-cyan);
+    outline: none;
+}
+.numero-personas:focus {
+    border: 2px solid #26C2AE;
+}
+
+.contenido-informacion {
+    padding: 37px;
+    border-radius: 15px;
+    color: var(--White);
+    background-color: var(--very-dark-cyan);
+}
+.contenido-informacion-persona {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.contenido-informacion-persona h3 {
+    font-size: 16px;
+    font-weight: 700;
+}
+.contenido-informacion-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+}
+.contenido-informacion-total h3 {
+    font-size: 16px;
+    font-weight: 700;
+}
+.persona {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--grayish-cyan);
+}
+.informacion-numeros {
+    font-size: 32px;
+    color: var(--strong-cyan);
+}
+.reinicio {
+    width: 100%;
+    height: 48px;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: 700;
+    background-color: var(--strong-cyan);
+    color: var(--very-dark-cyan);
+}
+
+
+@media screen and (min-width: 1024px) {
+    main {
+        display: flex;
+        width: 920px;
+        height: 481px;
+        justify-content: space-around;
+        border-radius: 25px 25px 25px 25px;
+    }
+    .informacion-cliente {
+        width: 379px;
+
+    }
+    .contenido-informacion {
+        width: 413px;
+    }
+}
