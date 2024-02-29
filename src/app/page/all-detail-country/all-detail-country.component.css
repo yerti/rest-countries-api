@@ -1,0 +1,130 @@
+.content-detail-page {
+  background-color: #F2F2F2;
+}
+.content-tarjets {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-items: center;
+  padding: 0 58px;
+}
+.tarjet {
+  width: 264px;
+  height: 336px;
+  background-color: var(--white);
+  margin-bottom: 75px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 9px 0px #0000000f
+}
+.tarjet img {
+  width: 264px;
+  height: 160px;
+  border-radius: 5px 5px 0 0;
+}
+.content-information-tarjet {
+  margin: 24px;
+}
+.content-information-tarjet h3 {
+  margin-bottom: 16px;
+  font-size: 18px;
+}
+.text-tarjet p {
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+.conten-filters-search {
+  padding: 0 81px 48px 81px;
+  display: flex;
+  justify-content: space-between;
+}
+.imagen-search {
+  position: absolute;
+  padding-left: 32px;
+  padding-top: 19px;
+}
+.input-search-country {
+  width: 480px;
+  height: 56px;
+  border-radius: 5px;
+  border: none;
+  padding-left: 74px;
+  box-shadow: 0px 0px 9px 0px #0000000f
+}
+.button-filter-region {
+  width: 200px;
+  height: 56px;
+  background-color: var(--white);
+  border: none;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  font-size: 14px;
+}
+.list-regions {
+  display: none;
+}
+
+.list-regions.visible {
+  display: block;
+}
+.list-regions {
+  display: block !important;
+  position: absolute;
+  width: 200px;
+  height: 164px;
+  margin-top: 4px;
+  border-radius: 5px;
+  background-color: var(--white);
+  padding: 0 24px;
+}
+.list-regions li {
+  list-style: none;
+  padding-top: 11px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.content-list {
+  display: none;
+}
+.tarjet.dark-mode {
+  background-color: var(--dark-blue);
+  color: var(--white);
+}
+.content-detail-page.dark-mode {
+  background-color: hsl(207, 26%, 17%);
+}
+.input-search-country.dark-mode {
+  background-color: var(--dark-blue);
+}
+.button-filter-region.dark-mode {
+  background-color: var(--dark-blue);
+  color: var(--white);
+}
+.list-regions.dark-mode {
+  background-color: var(--dark-blue);
+  color: var(--white);
+}
+
+.arrow-white {
+  fill: var(--white);
+}
+@media screen and (max-width: 600px) {
+  .content-tarjets {
+    grid-template-columns: 1fr;
+    margin-top: 32px;
+    padding: 0 16px;
+  }
+  .conten-filters-search {
+    padding: 0 16px 0 16px;
+    flex-direction: column;
+  }
+  .input-search-country {
+    width: 100%;
+    padding-bottom: 4px;
+  }
+  .button-filter-region {
+    margin-top: 4px;
+  }
+}

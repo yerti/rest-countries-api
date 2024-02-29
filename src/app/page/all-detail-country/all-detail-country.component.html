@@ -1,0 +1,75 @@
+<div class="content-detail-page" [ngClass]="{'small-screen': isSmallScreen, 'large-screen': isLargeScreen}" [class.dark-mode]="darkModeService.darkMode">
+  <app-header></app-header>
+  <div class="conten-filters-search">
+    <div>
+      <img
+        class="imagen-search"
+        src="assets/search.svg"
+        alt="icono de busqueda"
+      />
+      <input
+        type="text"
+        class="input-search-country"
+        placeholder="Search for a country…"
+        [class.dark-mode]="darkModeService.darkMode"
+        (input)="searchCountry($event)"
+      />
+    </div>
+    <div>
+      <button
+        (click)="toogleDisplay()"
+        class="button-filter-region"
+        [class.dark-mode]="darkModeService.darkMode"
+      >
+        Filter by Region
+        <svg
+        class="arrow"
+        [ngClass]="{ 'arrow-white': darkModeService.darkMode }"
+        width="12"
+        height="12"
+        viewBox="0 0 12 12"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M9.45 3.45L6 6.9L2.55 3.45L1.5 4.5L6 9L10.5 4.5L9.45 3.45Z"
+        />
+      </svg>
+
+      </button>
+      <div
+        [class.list-regions]="isDisplayed"
+        [class.dark-mode]="darkModeService.darkMode"
+        class="content-list"
+      >
+        <ul>
+          <li (click)="searchRegion('africa')">Africa</li>
+          <li (click)="searchRegion('america')">America</li>
+          <li (click)="searchRegion('asia')">Asia</li>
+          <li (click)="searchRegion('europe')">Europe</li>
+          <li (click)="searchRegion('oceania')">Oceania</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="content-tarjets">
+    <div
+      class="tarjet"
+      [class.dark-mode]="darkModeService.darkMode"
+      *ngFor="let item of filteredData"
+      (click)="showCountryDetails(item.name.common)"
+    >
+      <!-- Usamos filteredData en lugar de data -->
+      <img [src]="item.flags.png" alt="" />
+      <div class="content-information-tarjet">
+        <h3>{{ item.name.common }}</h3>
+        <div class="text-tarjet">
+          <p><strong>Population:</strong> {{ item.population }}</p>
+          <p><strong>Region:</strong> {{ item.region }}</p>
+          <p><strong>Capital:</strong> {{ item.capital }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

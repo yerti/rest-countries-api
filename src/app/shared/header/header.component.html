@@ -1,0 +1,8 @@
+<div [ngClass]="{'small-screen': isSmallScreen, 'large-screen': isLargeScreen}" class="content-header" [class.dark-mode]="darkModeService.darkMode">
+  <h1>Where in the world?</h1>
+
+  <div class="content-button-dark" (click)="toggleDarkMode()">
+    <img src="assets/luna.svg" alt="">
+    <p>Dark Mode</p>
+  </div>
+</div>
